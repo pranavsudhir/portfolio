@@ -1,3 +1,4 @@
+﻿
 /* ========================================
    Portfolio JavaScript (Clean Version)
    Behavior Only – No Content

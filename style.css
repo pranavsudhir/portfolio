@@ -1,3 +1,4 @@
+
 /* ========================================
    Modern Portfolio CSS
    Dark Theme with Gradient Accents
@@ -660,6 +661,18 @@ body.dark-theme .navbar.scrolled{
    Modern Skills Section
    ======================================== */
 
+.skill-page-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #c0a4f5;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
 .skills {
     padding: 70px 20px;
     background: transparent;
@@ -722,6 +735,321 @@ body.dark-theme .navbar.scrolled{
 .skill-tags span:hover {
     background: var(--primary-color);
     color: white;
+}
+
+/* New Skills Row Layout */
+.skills-rows-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-row {
+    background: rgba(30, 30, 46, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.skill-row:hover {
+    background: rgba(30, 30, 46, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.skill-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 48px;
+    right: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.4), transparent);
+}
+
+.skill-row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.skill-row-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+}
+
+.skill-row-title h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.skill-badge {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-row-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skill-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    width: 90px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.skill-box:hover, .skill-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.skill-box img, .skill-box .custom-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.skill-box .custom-icon, .skill-pill .custom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-box span {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-align: center;
+}
+
+.skill-box .custom-icon svg, .skill-pill .custom-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Core CS Fundamentals Pills */
+.pill-content {
+    gap: 12px;
+}
+
+.skill-pill {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.skill-pill img, .skill-pill .custom-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.skill-pill .custom-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.skill-pill span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* ========================================
+   Experience / Summer Training Section
+   ======================================== */
+
+.experience {
+    padding: 70px 20px;
+    background: transparent;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-experience {
+    border: 1px solid rgba(167, 139, 250, 0.4);
+    color: #a78bfa;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: rgba(167, 139, 250, 0.05);
+}
+
+.experience-title {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #c084fc, #e879f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.experience-title svg {
+    filter: drop-shadow(0 4px 6px rgba(192, 132, 252, 0.3));
+}
+
+.experience-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.experience-rows-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    padding: 30px 40px;
+}
+
+.exp-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.exp-card-title-group h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.exp-company {
+    color: #a78bfa;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.exp-date-badge {
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    color: #c084fc;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.exp-action-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.exp-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.exp-tag.primary-tag {
+    background: rgba(167, 139, 250, 0.15);
+    border-color: rgba(167, 139, 250, 0.3);
+    color: #e879f9;
+}
+
+.exp-bullet-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.exp-bullet-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.exp-bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #a78bfa;
+}
+
+.exp-bullet-list li .highlight {
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 /* Projects Section */
