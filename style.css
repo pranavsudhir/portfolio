@@ -485,6 +485,20 @@ body.dark-theme .navbar.scrolled{
 
 }
 
+.dark-profile-pic {
+    display: none;
+}
+
+body.dark-mode .light-profile-pic,
+body.dark-theme .light-profile-pic {
+    display: none;
+}
+
+body.dark-mode .dark-profile-pic,
+body.dark-theme .dark-profile-pic {
+    display: block;
+}
+
 /* Glow Effect */
 .hero-image::before {
     content: '';
@@ -730,6 +744,9 @@ body.dark-theme .navbar.scrolled{
     font-size: 0.85rem;
     border: 1px solid rgba(102, 126, 234, 0.2);
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .skill-tags span:hover {
