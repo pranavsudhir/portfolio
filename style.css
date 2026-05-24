@@ -1189,7 +1189,7 @@ body.dark-theme .dark-profile-pic {
     flex-direction: column;
 
     aspect-ratio: 1 / 1;   /* keep square */
-    padding: 28px;
+    padding: 20px;
 
     background: linear-gradient(
         135deg,
@@ -1232,8 +1232,19 @@ body.dark-theme .dark-profile-pic {
 
 /* Icon */
 .cert-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
+
+.cert-icon img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Title (fixed height block) */
